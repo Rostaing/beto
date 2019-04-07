@@ -1,0 +1,26 @@
+<%= simple_form_for(@post) do |f| %>
+          <%= f.error_notification %>
+          <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+  <ul>
+    <% @post.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+    <% end %>
+  </ul>
+
+          <div class="form-inputs">
+            <%= f.input :title, class:"form-control", placeholder: "Your title" %>
+            <% if @post.image? %>
+                <p>
+                  <%= image_tag post.image_url(:medium) %>
+                </p>
+            <% end %>
+              <%= f.input :image, as: :file %>
+              <%= f.input :author, class:"form-control", placeholder: "Your full name" %>
+              <%= f.cktext_area :description, as: :text, class:"form-control", placeholder: "Your description" %>
+              <%= f.association :category %>
+          </div>   
+          <div class="form-actions">
+            <%= f.button :submit, 'Publish', class: "btn btn-primary" %>
+          </div>
+<% end %>

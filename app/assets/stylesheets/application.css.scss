@@ -1,0 +1,160 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ *= require materialize
+ 
+ */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "social-share-button";
+
+#notice_wrapper{
+    position: absolute;
+    top: 0; 
+    width: 100%; 
+    z-index: 999; 
+    background: rgba(135, 216, 211, 0.85);
+
+    .alert, .notice{
+        padding: 2.1rem 0; 
+        text-align: center; 
+        margin: 0; 
+        font-size: 1.25rem; 
+        font-weight: 700; 
+        color: #FFFFFF; 
+        letter-spacing: 1px;
+    }
+}
+
+.like:hover{
+    text-decoration: none;
+    
+
+ .title:hover{
+    text-decoration: none;
+ }
+
+.link-color:hover{
+    text-decoration: #ff9e80;
+}
+
+}
+
+
+
+
+/*== Footer Area CSS Start ==*/
+
+#footer-area a {
+    color: #ffd000;
+}
+
+.footer-widget-area {
+    background-color: #ff9e80;
+    padding: 60px 0;
+}
+
+.footer-bottom-area {
+    background-color: #e64a19;
+    color: #eaeaea;
+    padding: 15px 0;
+}
+
+/*== Footer Area CSS End ==*/
+
+#sdd_chat {
+    background-color:     #f5f5f5;
+    min-height:             500px;
+}
+#sdd_chat > div {
+    margin-top:             25px;
+    margin-bottom:          25px;
+}
+@media (min-width: 992px) {
+
+    #sdd_chat > div:nth-child(even) {
+        margin-top:             50px;
+        margin-left:            50%; 
+    }
+}
+
+.sdd_chat_img {
+    margin-bottom:          25px;
+    padding:                0px;
+}
+.sdd_chat_img img {
+    width:                  50px;
+    height:                 50px;
+}
+
+.sdd_chat_content {    
+    border:                 2px solid #fff;
+    border-radius:          10px;   
+    background-color:     #fff;
+    text-align:             justify;
+}
+.sdd_chat_content::before {
+    content:                '';
+    position:               relative;
+    top:                    -37px;
+    left:                   -6px;  
+    z-index:                100;  
+    width:                  0px;
+    height:                 0px;
+    border-left:            11px solid transparent;
+    border-right:           11px solid transparent;
+    border-bottom:          21px solid #fff; 
+
+}
+.sdd_chat_dateContent {     
+    font-size:              1em;
+    font-style: italic;
+    opacity:                0.5;
+}
+.sdd_chat_circle span {         
+    margin-right:           10px;        
+    margin-left:            5px; 
+    padding-right:          7px;
+    padding-left:           7px;
+    border:                 1px solid #f5f5f5;
+    border-radius:          50%;    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

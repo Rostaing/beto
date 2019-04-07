@@ -1,0 +1,54 @@
+<div class="navbar-fixed">
+  <nav class="nav-extended" style="padding-left: 10px; padding-right: 10px;padding-top: 5px; margin-bottom: 10px;">
+      <div class="nav-wrapper">
+              <div class="navbar-header col-xs-1 col-sm-1 col-md-1 col-lg-1 sdd_chat_img btn-floating btn-large pulse"  >
+                <img src="../images/beto.jpg" class="img-circle">
+              </div>
+                
+              <ul class="nav navbar-nav" class="nav-link active">
+                <li><%= link_to "BETO", root_path, class: "navbar-brand", class: "nav-link active" %></li>
+                <li><%= link_to "NEWS", posts_path, class: "nav-link active" %></li>
+                <!-- <li><%# link_to "Category", new_category_path %></li> -->
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="fase">CATEGORIES<span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu">
+                    <% Category.all.each do |category| %>
+                      <li id="link-color">
+                        <%= link_to category.name, posts_path(category: category.name), class: "link", class: "link-color" %>
+                      </li>
+                    <% end %>
+                    <%# Category.where(display_in_navbar: true).each do |category|  %>
+                      <!-- <li>
+                        <%# link_to category.name, posts_path(category: category.name), class: "link"  %>
+                      </li> -->
+                    <%# end %>
+                  </ul>
+                </li>
+                <li><%= link_to "ABOUT", about_path %></li>
+                <li><%= link_to "CONTACT", new_contact_path %></li>
+              </ul>
+              <ul class="nav navbar-nav navbar-right">
+                  <li><%= link_to "SIGN UP", new_user_registration_path %></li>
+                  <li><%= link_to "SIGN IN", new_user_session_path %></li>
+                   <% if user_signed_in? %>
+                   <!-- <li><%# link_to "CHATTER", chatter_path %></li>   -->
+                      <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="fase" , style="padding-top: 13px;" ><%= gravatar_tag current_user.email, :size => 25 %> <%= current_user.username.upcase %>    
+                        <span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu" class="well" >
+                        <li><%= link_to "ADD NEWS", new_post_path, class: "link" %></li>
+                       
+                        <li><%= link_to "SIGN OUT", destroy_user_session_path, method: :delete, data: {confirm: 'Are you sure?'}, class: "link" %></li>
+                        <li><%= link_to 'EDIT YOUR COUNT', edit_user_registration_path , class: "link" %></li> 
+                    <% end %>
+                  </ul>
+                </li>
+              </ul>
+
+      </div>
+  </nav>
+</div> 
+
+
+
+

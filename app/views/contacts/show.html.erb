@@ -1,0 +1,49 @@
+<% provide(:title, "Message report") %>
+<h2 class="text-center" style="font-family: 'Tangerine', serif;
+  font-size: 48px;
+  text-shadow: 4px 4px 4px #aaa; padding-top: 50px;">Message report</h2>
+<div class="container">
+  <div class="row">
+    <div class="well" style="background-color: #00897b; color: white;">
+      <p class=" pull-right"><%= @contact.created_at.strftime("%I:%M %p  %d-%b-%y") %></p>
+      <p>
+        <strong>First name:</strong>
+        <%= @contact.first_name %>
+      </p>
+
+      <p>
+        <strong>Last name:</strong>
+        <%= @contact.last_name %>
+      </p>
+
+      <p>
+        <strong>Email:</strong>
+        <%= @contact.email %>
+      </p>
+
+      <p>
+        <strong>Topic:</strong>
+        <%= @contact.topic %>
+      </p>
+
+      <!-- <p>
+        <strong>Web site:</strong>
+        <%= @contact.web_site %>
+      </p> -->
+
+      <p>
+        <strong>Message:</strong>
+        <%= @contact.message %>
+      </p>
+      <%= link_to 'Edit', edit_contact_path(@contact), class: "btn btn-info", style: "background-color: #ffffff; color: #e64a19;" %>
+      <%= link_to 'Back', new_contact_path, class: "btn btn-info", style: "background-color: #ffffff; color: #e64a19;" %>
+    </div>
+  </div>
+</div>
+<br>
+
+
+
+
+
+

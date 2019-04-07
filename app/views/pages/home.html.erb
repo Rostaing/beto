@@ -1,0 +1,58 @@
+<% provide(:title, "Home") %>
+<script type="text/javascript">
+  $(document).ready(function(){
+
+    document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.slider');
+    var instances = M.Slider.init(elems, options);
+  });
+
+  // Or with jQuery
+
+  $(document).ready(function(){
+    $('.slider').slider();
+
+  });
+
+
+  });
+</script>
+<div class="slider">
+    <ul class="slides"  style="margin-top: 4px;">
+      <li>
+        <img src="https://lorempixel.com/580/250/nature/1"> <!-- random image -->
+        <div class="caption center-align">
+          <h3>Yay! You're on Beto!</h3>
+          <h5 class="light grey-text text-lighten-3">A platform of news coded by Davila Rostaing.</h5>
+        </div>
+      </li>
+      <li>
+        <img src="https://lorempixel.com/580/250/nature/2"> <!-- random image -->
+        <div class="caption left-align">
+          <h3>Welcome to Beto!</h3>
+          <h5 class="light grey-text text-lighten-3">A platform of news coded by Davila Rostaing.</h5>
+        </div>
+      </li>
+      <li>
+        <img src="https://lorempixel.com/580/250/nature/3"> <!-- random image -->
+
+        <div class="caption right-align">
+          <h3>Create your account!</h3>
+          <h5 class="light grey-text text-lighten-3">A platform of news coded by Davila Rostaing.</h5>
+        </div>
+      </li>
+      <li>
+        <img src="https://lorempixel.com/580/250/nature/4"> <!-- random image -->
+        <div class="caption center-align">
+          <h3>Publish your informations on this site!</h3>
+          <h5 class="light grey-text text-lighten-3">A platform of news coded by Davila Rostaing.</h5>
+        </div>
+      </li>
+    </ul>
+</div>
+<!-- <p class=" z-depth-1 text-center" style="font-family: 'Tangerine', serif;
+  font-size: 48px;
+  text-shadow: 4px 4px 4px #aaa; padding-top: 5%;"><%# post_number %></p> -->
+      
+
+    

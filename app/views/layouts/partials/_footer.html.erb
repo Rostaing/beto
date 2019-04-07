@@ -1,0 +1,29 @@
+<footer class="page-footer">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="btn-floating btn-large pulse">BETO?</h5>
+                <p class="grey-text text-lighten-4">BETO is a platform of news coded by <b>Davila Rostaing</b> 
+                helping people to post or publishing informations in real time...</p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">LINKS</h5>
+                <!-- <ul> -->
+
+                  <!-- <li ><span><%# link_to "Béto", root_path, class: "grey-text text-lighten-3" %></span></li> -->
+                  <span><%= link_to "NEWS", posts_path, class: "grey-text text-lighten-3" %></span> | <span><%= link_to "ABOUT", about_path, class: "grey-text text-lighten-3" %></span> | <span><%= link_to "CONTACT", new_contact_path, class: "grey-text text-lighten-3" %></span> 
+                  <!-- <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li> -->
+                <!-- </ul> -->
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+              &copy; <%= Time.now.year %> <b>Beto</b>, All rights reserved.          
+            <p class="grey-text text-lighten-4 right"><b>Email:</b> beto.nous@gmail.com</p>
+            </div>
+          </div>
+</footer>

@@ -1,0 +1,13 @@
+<% provide(:title, "Add News") %>
+<div class="container" style="padding-top: 100px;">
+  <div class="row">
+    <div class="well" style="background-color: white;">
+	    <h4 class="text-center" style="font-family: 'Tangerine', serif;
+	  font-size: 48px;
+	  text-shadow: 4px 4px 4px #aaa;">Add News</h4>
+		<br>
+		<%= render 'form', post: @post %><br>
+		<%# link_to 'Back', posts_path, class:"btn btn-default" %>
+    </div>
+  </div>
+</div>
