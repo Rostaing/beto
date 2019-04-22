@@ -24,6 +24,12 @@ class PostsController < ApplicationController
     #   flash[:notice] = "Oups, we can't find a News for this url"
     #   redirect_to root_path
     # end
+    if @post.nil?
+    @books = Post.all
+    flash.now[:alert] = "Oups, we can't find a News for this url"
+    #render "index"
+    redirect_to root_path
+    end
   end
 
   # GET /posts/new

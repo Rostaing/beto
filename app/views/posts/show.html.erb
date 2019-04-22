@@ -20,15 +20,14 @@
 
   });
 </script>
-<div class="container" style="padding-top: 65px;">
-      <h4 class="text-center" style="font-family: 'Tangerine', serif;
+<div class="container">
+      <h4 class="text-center bg-danger" style="font-family: 'Tangerine', serif;
   font-size: 48px;
   text-shadow: 4px 4px 4px #aaa;">News Details</h4>
-  <hr>
 </div>
 <!-- <h3 class="text-center">News Details</h3><br> -->
-<div class="container bg-default" style="border: 4px solid #e64a19;">
-      <div class="row"><br>
+<div class="container bg-default" style="border: 4px solid #e64a19; padding-top: 12px;">
+      <div class="row">
         <!-- <blockquote> -->
           <div class="text-center">
             <p>
@@ -60,19 +59,19 @@
           <br>  
           <div class="well" style="background-color: #ffffff;">
 
-            <p class="flow-text"><%= raw @post.description %></p>
+            <p class="flow-text col-sm-12"><%= raw @post.description %></p>
 
             <% if current_user && current_user.admin %>
               <div style="padding-bottom: 10px;">
-                <span class="badge collection-item"><%= link_to 'Back', posts_path, style: "text-decoration: none; color: #ffffff; padding-right: -10px;" %></span>
+                <span class="badge collection-item"><%= link_to '', posts_path, style: "text-decoration: none; color: #ffffff; padding-right: -10px;", class: "glyphicon glyphicon-hand-right" %></span>
 
-                <span class="badge collection-item"><%= link_to "Delete", post_path(@post), method: :delete, data: { confirm: "Are you sure?"}, style: "text-decoration: none; color: #ffffff; padding-right: -10px;" %></span>
+                <span class="badge collection-item"><%= link_to "", post_path(@post), method: :delete, data: { confirm: "Are you sure?"}, style: "text-decoration: none; color: #ffffff; padding-right: -10px;", class: "glyphicon glyphicon-trash" %></span>
 
-                <span class="badge collection-item"><%= link_to 'Edit', edit_post_path(@post), style: "text-decoration: none; color: #ffffff; padding-right: -10px" %></span>
+                <span class="badge collection-item"><%= link_to '', edit_post_path(@post), style: "text-decoration: none; color: #ffffff; padding-right: -10px", class: "glyphicon glyphicon-pencil"%></span>
               </div>
               <% else %>
                <div style="padding-bottom: 10px;">
-                  <span class="badge collection-item"><%= link_to 'Back', posts_path, style: "text-decoration: none; color: #ffffff; padding-right: -10px;" %></span>
+                  <span class="badge collection-item"><%= link_to '', posts_path, style: "text-decoration: none; color: #ffffff; padding-right: -10px;", class: "glyphicon glyphicon-hand-right" %></span>
                 </div>
             <% end %>
 
@@ -102,8 +101,8 @@
         <!-- </blockquote> -->
         <!-- <h4 class="text-center"><strong>Comment this News!</strong></h4> -->
           <!-- <blockquote> -->
-            <h5 style="padding-right: 45px;">Leave a comment</h5>
-            <div class="form-group h">
+            <h5 style="padding-left: 16px;">Leave a comment</h5>
+            <div class="form-group col-sm-12">
                 <%= form_with model: [@post, @comment] do |f| %>
                   <div>
                     <%= f.text_area :body, as: :text, placeholder: 'Leave a comment', class: "form-control", style: "width:50%; height:50%; padding-bottom: 5%;" %>
@@ -115,7 +114,7 @@
             </div>
             <br>
             <!-- <div class="col s12 m2"> -->
-                  <h5 class="z-depth-1 text-center"><span class= "btn-floating pulse"><%= @post.comments.count %></span><strong><%= comment_count %></strong></h5>
+                  <h5 class="z-depth-1 text-center col-sm-12 bg-danger"><span class= "btn-floating pulse"><%= @post.comments.count %></span><strong><%= comment_count %></strong></h5>
             <!-- </div> -->
             <!-- <h4 style="padding-left: 20px;" class="text-center"></h4>     -->
             

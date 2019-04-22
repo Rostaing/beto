@@ -1,4 +1,4 @@
-<div class="container" class="input-field col s6" style="padding-top: 100px;">
+<div class="container" class="input-field col s6" style="padding-top: 12px;"><br>
   <div class="row">
     <div class="well" style="background-color: #ffffff;">
       <h2 class="text-center" style="font-family: 'Tangerine', serif;
@@ -6,10 +6,11 @@
   text-shadow: 4px 4px 4px #aaa;">Get in touch</h2>
       <div class="well" style="background-color: #00897b; color: #ffffff;">
         <h3 style="padding-left: 40px;">Visit Us</h3>
-        <p style="padding-left: 40px;"><b>Address:</b> Gabon, Libreville
-        4343 IAI Road</p>
-        <p style="padding-left: 40px;"><b>Phone:</b> +241 07 78 49 86</p>
-        <p style="padding-left: 40px;"><b>Email:</b> beto.nous@gmail.com</p>
+        <p style="padding-left: 40px;"><i class="glyphicon glyphicon-map-marker"></i><b> Gabon, Libreville
+        4343 IAI Road</b></p>
+        <p style="padding-left: 40px;"><i class="glyphicon glyphicon-earphone"></i><b> +241 07 78 49 86</p>
+        <p style="padding-left: 40px;"><i class="
+glyphicon glyphicon-envelope"></i> beto.nous@gmail.com</p>
       </div>
       <p>Your email address will not be published.</p>
       <%= simple_form_for(@contact) do |f| %>
@@ -17,12 +18,12 @@
       <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
           <div class="form-inputs">
-            <%= f.input :first_name, input_html: { class: 'special' }, placeholder: " Your first name", class:"form-control"%>
-            <%= f.input :last_name, placeholder: " Your last name", class:"form-control", class:"required" %>
-            <%= f.input :email, placeholder: " Your email", class:"form-control" %>
-            <%= f.input :topic, label:"Subject", placeholder: "Subject", class:"form-control" %>
+           <i class="glyphicon glyphicon-user"></i><%= f.input :first_name, label:"", input_html: { class: 'special' }, placeholder: " Your first name", class:"form-control" %>
+           <i class="glyphicon glyphicon-user"></i><%= f.input :last_name, label:"", placeholder: " Your last name", class:"form-control", class:"required" %>
+           <i class="glyphicon glyphicon-envelope"></i><%= f.input :email, label:"", placeholder: " Your email", class:"form-control" %>
+           <i class="glyphicon glyphicon-pencil"></i><%= f.input :topic, label:"", placeholder: "Subject", class:"form-control" %>
             <%# f.input :web_site, placeholder: "Web site" %>
-            <%= f.input :message, placeholder: "Your message", class:"form-control" %>
+            <i class="glyphicon glyphicon-comment"></i><%= f.input :message, label:"", placeholder: "Your message", class:"form-control" %>
           </div>
 
           <div class="form-actions">

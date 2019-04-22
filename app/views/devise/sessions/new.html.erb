@@ -1,5 +1,5 @@
 <% provide(:title, "Sign in") %>
-  <div class="container input-field col s6" style="padding-top: 100px;">
+  <div class="container input-field col s6" style="padding-top: 12px;">
     <div class="row">
       <!-- <div class="col-lg-4 col-md-8 m-auto"> -->
             <div class="well">
@@ -12,12 +12,13 @@
                   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
                     <div class="form-group">
                       <%# f.label :email %>
-                      <%= f.text_field :login, autofocus: true, autocomplete: 'login', class: 'form-control', placeholder: "Email or Username" %>
+                      <i class="glyphicon glyphicon-user"></i><%= f.text_field :login, autofocus: true, autocomplete: 'login', class: 'form-control', placeholder: "Email or Username" %>
                     </div>
 
                     <div class="form-group">
                       <%# f.label :password %>
-                      <%= f.password_field :password, autocomplete: 'current-password', class: 'form-control', placeholder: "Password" %>
+                     <i class="
+glyphicon glyphicon-lock"></i><%= f.password_field :password, autocomplete: 'current-password', class: 'form-control', placeholder: "Password" %>
                     </div>
                 
               <!-- </div> -->
@@ -46,7 +47,7 @@
                           <!-- <div class="text-center">
                             <p>Don't have an account? <%# link_to "Sign Up", new_user_registration_path %></p>
                           </div> -->
-                          <div  class="text-center">
+                          <div  class="text-center bg-danger">
                             <%= link_to "About", about_path %>
                             <span>|</span>
                             <%= link_to "Contact", new_contact_path %>

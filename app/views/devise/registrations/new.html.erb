@@ -1,5 +1,5 @@
 <% provide(:title, "Sign up") %>
-<div class="container input-field col s6" style="padding-top: 100px;" >
+<div class="container input-field col s6" style="padding-top: 12px;">
   <div class="row">
     <!-- <div class="col-lg-4 col-md-8 m-auto"> -->
       <!-- <div class="login-page-content"> -->
@@ -14,17 +14,19 @@
 
               <div class="form-group">
                 <%# f.label :email %>
-                <%= f.text_field :username, autofocus: true, autocomplete: 'username', class: 'form-control', placeholder: "Username" %>
+                <i class="glyphicon glyphicon-user"></i><%= f.text_field :username, autofocus: true, autocomplete: 'username', class: 'form-control', placeholder: "Username" %>
               </div>
 
               <div class="form-group">
                 <%# f.label :email %>
-                <%= f.email_field :email, autofocus: true, autocomplete: 'email', class: 'form-control', placeholder: "Email" %>
+              <i class="
+glyphicon glyphicon-envelope"></i><%= f.email_field :email, autofocus: true, autocomplete: 'email', class: 'form-control', placeholder: "Email" %>
               </div>
 
               <div class="form-group">
                 <%# f.label :password %>
-                <%= f.password_field :password, autocomplete: 'current-password', class: 'form-control', placeholder: "Password" %>
+                <i class="
+glyphicon glyphicon-lock"></i><%= f.password_field :password, autocomplete: 'current-password', class: 'form-control', placeholder: "Password" %>
 
                 <% if @minimum_password_length %>
                   <small class="form-text text-muted"><%= t('devise.shared.minimum_password_length', count: @minimum_password_length) %></small>
@@ -33,7 +35,8 @@
 
               <div class="form-group">
                 <%# f.label :password_confirmation %>
-                <%= f.password_field :password_confirmation, autocomplete: 'current-password', class: 'form-control', placeholder: "Password confirmation" %>
+                <i class="
+glyphicon glyphicon-lock"></i><%= f.password_field :password_confirmation, autocomplete: 'current-password', class: 'form-control', placeholder: "Password confirmation" %>
               </div>
 
               
@@ -52,7 +55,7 @@
            <!-- <div class="create-ac">
                 <p>Have an account? <%# link_to "Sign in", new_user_session_path %></p>
            </div> -->
-           <div class="text-center">
+           <div class="text-center bg-danger">
                 <%= link_to "About", about_path %>
                 <span>|</span>
                 <%= link_to "Contact", new_contact_path %>

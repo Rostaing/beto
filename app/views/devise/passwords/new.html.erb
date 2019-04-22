@@ -1,5 +1,5 @@
 <% provide(:title, "Forgot your password") %>
-<div class="container" style="padding-top: 100px;">
+<div class="container" style="padding-top: 25px;">
 	<div class="row">
 		<!-- <div class="col-lg-4 col-md-8 m-auto"> -->
             <!-- <div class="login-page-content"> -->
@@ -15,16 +15,18 @@
 
 						   <div class="form-group">
 								<%# f.label :email %>
-								<%= f.email_field :email, autofocus: true, autocomplete: 'email', class: 'form-control', placeholder: "Email" %>
+								<i class="
+glyphicon glyphicon-lock"></i><%= f.email_field :email, autofocus: true, autocomplete: 'email', class: 'form-control', placeholder: "Email" %>
 						   </div>
 							<!-- <br> -->
 						   <div class="form-group">
-							 <%= f.submit t('.send_me_reset_password_instructions') %>
+							 <%= f.submit t('.send_me_reset_password_instructions'), class: "bg-primary" %>
 							
 							 <% end %>
 						   </div>
 					       <%= render 'devise/shared/links' %>
-		                     <div class="text-center">
+
+		                     <div class="text-center bg-danger">
 		                        <%= link_to "About", about_path %>
 		                        <span>|</span>
 		                        <%= link_to "Contact", new_contact_path %>

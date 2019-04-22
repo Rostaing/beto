@@ -1,8 +1,9 @@
-<div class="navbar-fixed">
-  <nav class="nav-extended" style="padding-left: 10px; padding-right: 10px;padding-top: 5px; margin-bottom: 10px;">
+<div>
+  <nav class="nav-extended" style="margin-bottom: 10% auto; padding-left: 10px; padding-right: 10px;">
       <div class="nav-wrapper">
               <div class="navbar-header col-xs-1 col-sm-1 col-md-1 col-lg-1 sdd_chat_img btn-floating btn-large pulse"  >
-                <img src="../images/beto.jpg" class="img-circle">
+                <!-- <img src="../images/beto.jpg" class="img-circle"> -->
+                <%= image_tag "beto.jpg", class: "img-circle" %>
               </div>
                 
               <ul class="nav navbar-nav" class="nav-link active">
@@ -39,7 +40,7 @@
                         <li><%= link_to "ADD NEWS", new_post_path, class: "link" %></li>
                        
                         <li><%= link_to "SIGN OUT", destroy_user_session_path, method: :delete, data: {confirm: 'Are you sure?'}, class: "link" %></li>
-                        <li><%= link_to 'EDIT YOUR COUNT', edit_user_registration_path , class: "link" %></li> 
+                        <li><%= link_to 'EDIT YOUR PROFIL', edit_user_registration_path , class: "link" %></li> 
                     <% end %>
                   </ul>
                 </li>

@@ -1,27 +1,28 @@
 <% provide(:title, "News") %>
 <!-- <p id="notice"><%# notice %></p> -->
-<div class="container col s12 m2" style="padding-top: 65px;">
-      <h4 class="text-center" style="font-family: 'Tangerine', serif;
+<div class="container col s12 m2">
+      <h4 class="text-center bg-danger" style="font-family: 'Tangerine', serif;
   font-size: 48px;
   text-shadow: 4px 4px 4px #aaa;">News</h4>
-  <hr>
 </div>
 <div class="fieldset">
   <% @posts.in_groups_of(3, false).each do |group| %>
     <div class="row">
-      <% group.each do |post| %>
-        <div class="col-sm-4 col-md-4 col-lg-4">
-          <div class="thumbnail">
-            <%= image_tag post.image_url, alt:post.title %>
-            <h6><%= link_to post.title, post_path(post), style: "text-decoration: none;" %></h6>
-             <!-- <p><%# truncate(post.description) %></p> -->
-              <p><b><%= time_ago_in_words(post.created_at) %>  ago</b> | <%= link_to pluralize(post.comments.count, "Comment"), post_path(post) , style:"text-decoration: none;"%></p>
-            <div class="caption" style="padding-left: -40px;">
-              <%= link_to "Read More", post_path(post), class:"btn btn-info" %>             
+      <div class="col-sm-12">
+        <% group.each do |post| %>
+          <div class="col-sm-4 col-md-4 col-lg-4">
+            <div class="thumbnail">
+              <%= image_tag post.image_url, alt:post.title %>
+              <h6><%= link_to post.title, post_path(post), style: "text-decoration: none;" %></h6>
+               <!-- <p><%# truncate(post.description) %></p> -->
+                <p><b><%= time_ago_in_words(post.created_at) %>  ago</b> | <%= link_to pluralize(post.comments.count, "Comment"), post_path(post) , style:"text-decoration: none;"%></p>
+              <div class="caption" style="padding-left: -40px;">
+                <%= link_to "Read More", post_path(post), class:"btn btn-info" %>             
+              </div>
             </div>
           </div>
-        </div>
-      <% end %>
+        <% end %>
+      </div>
     </div>
   <% end %>
 </div>
